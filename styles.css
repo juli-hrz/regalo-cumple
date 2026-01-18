@@ -1,0 +1,310 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fdf2f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Portada ===== */
+header {
+  height: 100vh; /* ocupa toda la pantalla */
+  background-image: url("imagenes/portada.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+/* Capa oscura para que el texto se lea */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Texto de la portada */
+header h1,
+header h2,
+header p {
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header h2 {
+  margin: 0;
+}
+
+header p {
+  margin-top: 15px;
+  font-style: italic;
+}
+
+
+/* Contenido */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8c8dc;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+
+/* ===== Momentos / Galería ===== */
+
+#momentos {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.intro-momentos {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  font-style: italic;
+  color: #555;
+}
+
+/* Cada momento */
+.momento {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Título del momento */
+.momento h3 {
+  margin-top: 0;
+  color: #b84d7a;
+}
+
+/* Contenedor de fotos */
+.fotos {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* Imágenes */
+.fotos img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+/* Hover suave */
+.fotos img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Captura más grande */
+.momento.captura .fotos img {
+  max-width: 500px;
+}
+
+/* ===== Visor de imagen grande ===== */
+#visor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#visor img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+}
+
+.intro-canciones {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 25px;
+  font-style: italic;
+  color: #555;
+}
+
+#contador {
+  text-align: center;
+}
+
+.tiempo {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #b84d7a;
+}
+
+main {
+  display: none;
+}
+
+/* ===== ACCESO ===== */
+
+#acceso {
+  height: 100vh;
+  background: linear-gradient(135deg, #fdf2f8, #f8c8dc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.acceso-card {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.acceso-card h1 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+}
+
+.acceso-card p {
+  margin-bottom: 25px;
+  font-style: italic;
+  color: #555;
+}
+
+.acceso-card input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.acceso-card input:focus {
+  outline: none;
+  border-color: #b84d7a;
+}
+
+.acceso-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: #b84d7a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.acceso-card button:hover {
+  background-color: #a03e68;
+  transform: scale(1.02);
+}
+
+/* ----- MOBILE FIRST ----- */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Que las secciones no queden apretadas */
+section {
+  padding: 20px 16px;
+}
+
+/* Textos legibles */
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Imágenes responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Galería en columna en celular */
+.fotos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Tarjeta de acceso */
+.acceso-card {
+  width: 90%;
+  max-width: 360px;
+}
+
+/* Contador centrado */
+.tiempo {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .fotos {
+    flex-direction: row;
+  }
+
+  section {
+    padding: 40px;
+  }
+}
