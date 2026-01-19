@@ -308,3 +308,10 @@ img {
     padding: 40px;
   }
 }
+
+.separador {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 30px 0 50px;
+  opacity: 0.7;
+}
