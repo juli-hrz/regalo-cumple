@@ -61,7 +61,7 @@ if (botonEntrar) {
       acceso.style.display = "none";
       main.style.display = "block";
     } else {
-      alert("Mmm… pensalo un poquito más");
+      alert("Mbaepikoooo");
     }
   });
 }
